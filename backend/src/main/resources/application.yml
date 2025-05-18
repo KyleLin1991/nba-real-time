@@ -1,0 +1,17 @@
+server:
+  port: 8080
+
+
+logging:
+  level:
+    root: INFO
+    com.nba.realtime: DEBUG
+  pattern:
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+    console: "%clr(%d{yyyy-MM-dd HH:mm:ss}){cyan} [%thread] %clr(%-5level){faint,blue,green,yellow,red,magenta} %logger{36} - %msg%n"
+
+rapidapi:
+  url: https://api-nba-v1.p.rapidapi.com/
+  host: api-nba-v1.p.rapidapi.com
+  key: 46bbc8c6c3msh4275edccf81780bp1935bbjsnc882a902fb97
+
