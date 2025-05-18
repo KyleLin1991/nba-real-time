@@ -1,6 +1,6 @@
 # 🚀 NBA 即時比分
 
-<img src="./README-img/nba-logo.png" alt="NBA logo圖片" width="250"/>
+<img src="./README-img/nba-logo.png" alt="NBA logo圖片" width="500"/>
 
 ---
 
