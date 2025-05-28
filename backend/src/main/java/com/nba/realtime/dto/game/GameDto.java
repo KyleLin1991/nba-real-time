@@ -32,9 +32,9 @@ public class GameDto {
 
     private GameStatusDto status;
     private GamePeriodsDto periods;
-    private ArenaDto arenaDto;
-    private TeamsDto teamsDto;
-    private ScoresDto scoresDto;
+    private ArenaDto arena;
+    private TeamsDto teams;
+    private ScoresDto scores;
 
     @Schema(name = "裁判清單")
     private List<String> officials;

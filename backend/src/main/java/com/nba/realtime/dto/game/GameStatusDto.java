@@ -21,7 +21,7 @@ public class GameStatusDto {
     @Schema(name = "是否為中場休息中")
     private boolean halftime;
 
-    @Schema(name = "狀態代碼 1 → 尚未開始 、 3 → 進行中 、 4 → 已結束")
+    @Schema(name = "狀態代碼 1 → 尚未開始 、 2 → 進行中 、 3 → 已結束")
     private int shortStatus;
 
     @Schema(name = "狀態文字描述")

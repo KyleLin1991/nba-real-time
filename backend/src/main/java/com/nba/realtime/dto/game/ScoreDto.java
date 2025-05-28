@@ -23,7 +23,7 @@ public class ScoreDto {
     private int loss;
 
     @Schema(name = "系列賽戰績")
-    private SeriesDto seriesDto;
+    private SeriesDto series;
 
     @Schema(name = "各節得分(尚未開始為空字串)")
     private List<String> linescore;

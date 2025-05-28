@@ -10,6 +10,13 @@ logging:
     file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
     console: "%clr(%d{yyyy-MM-dd HH:mm:ss}){cyan} [%thread] %clr(%-5level){faint,blue,green,yellow,red,magenta} %logger{36} - %msg%n"
 
+# Security Setting -----------------------------------------------------------------------------------
+security:
+  ignore-security-check-uri-list:
+    /swagger-ui/**,
+    /v3/api-docs/**,
+    /games/**
+
 rapidapi:
   url: https://api-nba-v1.p.rapidapi.com/
   host: api-nba-v1.p.rapidapi.com

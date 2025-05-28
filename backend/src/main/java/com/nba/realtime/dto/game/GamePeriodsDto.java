@@ -20,6 +20,6 @@ public class GamePeriodsDto {
     @Schema(name = "比賽總共幾節")
     private int total;
 
-    @Schema(name = "是否為本節結束")
+    @Schema(name = "是否為本節結束", description = "判斷是否進入節與節的休息時間")
     private boolean endOfPeriod;
 }
