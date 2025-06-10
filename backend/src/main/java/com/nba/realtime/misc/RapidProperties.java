@@ -2,6 +2,7 @@ package com.nba.realtime.misc;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
@@ -17,5 +18,7 @@ public class RapidProperties {
 
     private String url;
     private String host;
+
+    @Value("${rapidapi.key}")
     private String key;
 }
