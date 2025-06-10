@@ -20,5 +20,4 @@ security:
 rapidapi:
   url: https://api-nba-v1.p.rapidapi.com/
   host: api-nba-v1.p.rapidapi.com
-  key: 46bbc8c6c3msh4275edccf81780bp1935bbjsnc882a902fb97
 

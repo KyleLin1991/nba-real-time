@@ -18,5 +18,15 @@
 - **Frontend**  
   React / Vite / Tailwind / shadcn
 
-- **Blockchain SDK**  
+- **Blockchain SDK**
   Rapid API-NBA
+
+## Running the application
+
+Set the RapidAPI key as an environment variable before starting the backend:
+
+```bash
+export RAPIDAPI_KEY=your-api-key
+```
+
+The backend reads this value via the `rapidapi.key` property.
