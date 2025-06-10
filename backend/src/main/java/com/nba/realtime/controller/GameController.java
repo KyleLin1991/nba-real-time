@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author Kyle
  * @since 2025/5/16
  */
-@Tag(name = "NBA比賽", description = "取得當日NBA比賽")
+@Tag(name = "NBA比賽", description = "NBA比賽結果")
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/games")
@@ -29,12 +29,5 @@ public class GameController {
     public ResponseEntity<GameResponseDto> getGames(@PathVariable String date) {
 
         return ResponseEntity.status(HttpStatus.OK).body(gameService.getGames(date));
-    }
-
-    @Operation(summary = "直播中的比賽")
-    @GetMapping("/live")
-    public ResponseEntity<String> getGameLives() {
-
-        return ResponseEntity.status(HttpStatus.OK).body(gameService.getGameLives());
     }
 }

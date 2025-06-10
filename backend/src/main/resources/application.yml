@@ -15,9 +15,10 @@ security:
   ignore-security-check-uri-list:
     /swagger-ui/**,
     /v3/api-docs/**,
-    /games/**
+    /games/**,
+    /players/**
 
 rapidapi:
   url: https://api-nba-v1.p.rapidapi.com/
   host: api-nba-v1.p.rapidapi.com
-
+  key: ${RAPIDAPI_KEY}

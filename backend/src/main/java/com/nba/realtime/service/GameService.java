@@ -9,5 +9,4 @@ import com.nba.realtime.dto.game.GameResponseDto;
 public interface GameService {
 
     GameResponseDto getGames(String date);
-    String getGameLives();
 }

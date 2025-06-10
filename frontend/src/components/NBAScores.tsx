@@ -17,7 +17,7 @@ const statusColor = (status: string) => {
 const NBAScores: React.FC = () => {
   const [games, setGames] = useState<Game[]>([]);
   const [loading, setLoading] = useState(true);
-  const [selectedGame, setSelectedGame] = useState<Game | null>(null);
+  const [selectedGameId, setSelectedGameId] = useState<number | null>(null);
 
   useEffect(() => {
     const fetchGames = async () => {
@@ -25,13 +25,12 @@ const NBAScores: React.FC = () => {
         const today = new Date().toISOString().split('T')[0]; // "YYYY-MM-DD"
 
         const result = await axios.get(`${import.meta.env.VITE_API_URL}/games/${today}`);
-        console.log(result); // 印出來看是否有成功讀到 .env 的值
-
+        
         setGames(result.data.response);
         setLoading(false);
       } catch (error) {
-        console.error('error fetching scores:', error);
-        setLoading(false);
+          console.error('error fetching scores:', error);
+          setLoading(false);
       }
     }
 
@@ -40,11 +39,25 @@ const NBAScores: React.FC = () => {
 
   // 回上一頁功能（僅當有上一頁時顯示）
   const handleBack = () => {
-    setSelectedGame(null);
+    setSelectedGameId(null);
   };
 
   if (loading) return <div className="fixed inset-0 flex items-center justify-center bg-gradient-to-br from-blue-100 via-pink-50 to-yellow-100 z-50"><div className="text-xl font-bold text-gray-700">Loading scores...</div></div>;
-  if (selectedGame) return <NBABox game={selectedGame} onBack={handleBack} />;
+  
+  if (selectedGameId) {
+    const selectedGame = games.find(game => game.id === selectedGameId);
+    if (selectedGame && selectedGame.teams && selectedGame.scores) {
+        return (
+            <NBABox
+                gameId={selectedGameId}
+                teams={selectedGame.teams}
+                scores={selectedGame.scores}
+                status={selectedGame.status}
+                onBack={handleBack}
+            />
+        );
+    }
+  }
 
   return (
     <div className="fixed inset-0 min-h-screen min-w-full bg-gradient-to-br from-blue-100 via-pink-50 to-yellow-100 overflow-auto">
@@ -55,7 +68,7 @@ const NBAScores: React.FC = () => {
             <div
               key={game.id}
               className="bg-white rounded-2xl shadow-xl p-0 flex flex-col border-4 border-gray-200 cursor-pointer hover:scale-105 transition"
-              onClick={() => setSelectedGame(game)}
+              onClick={() => setSelectedGameId(game.id)}
               style={{ maxWidth: 540 }}
             >
               <div className="flex flex-row items-stretch w-full px-10 py-8 gap-8">

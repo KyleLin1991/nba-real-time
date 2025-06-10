@@ -1,4 +1,4 @@
-package com.nba.realtime.dto.game;
+package com.nba.realtime.dto.players;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
@@ -9,15 +9,15 @@ import java.util.List;
 
 /**
  * @author Kyle
- * @since 2025/5/16
+ * @since 2025/5/29
  */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class GameResponseDto {
+public class PlayerStatisticsResponseDto {
 
-    @Schema(name = "比賽數量")
+    @Schema(name = "球員數量")
     private int results;
 
-    private List<GamesDto> response;
+    private List<PlayerStatisticsDto> response;
 }

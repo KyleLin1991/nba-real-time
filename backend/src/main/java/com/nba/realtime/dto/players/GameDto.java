@@ -1,23 +1,19 @@
-package com.nba.realtime.dto.game;
+package com.nba.realtime.dto.players;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 /**
  * @author Kyle
- * @since 2025/5/16
+ * @since 2025/5/29
  */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class GameResponseDto {
+public class GameDto {
 
-    @Schema(name = "比賽數量")
-    private int results;
-
-    private List<GamesDto> response;
+    @Schema(description = "比賽 ID")
+    private int id;
 }

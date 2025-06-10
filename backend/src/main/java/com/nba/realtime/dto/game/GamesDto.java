@@ -14,7 +14,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class GameDto {
+public class GamesDto {
 
     @Schema(name = "比賽id")
     private int id;
