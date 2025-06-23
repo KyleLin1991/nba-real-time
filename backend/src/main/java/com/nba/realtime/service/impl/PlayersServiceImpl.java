@@ -1,7 +1,6 @@
 package com.nba.realtime.service.impl;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.nba.realtime.dto.players.PlayerStatisticsDto;
 import com.nba.realtime.dto.players.PlayerStatisticsResponseDto;
 import com.nba.realtime.misc.RapidApiClient;
 import com.nba.realtime.service.PlayersService;

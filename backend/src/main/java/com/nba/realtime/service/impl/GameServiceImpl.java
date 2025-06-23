@@ -6,7 +6,6 @@ import com.nba.realtime.misc.RapidApiClient;
 import com.nba.realtime.service.GameService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.apachecommons.CommonsLog;
-import okhttp3.OkHttpClient;
 import okhttp3.Response;
 import org.json.JSONObject;
 import org.springframework.http.HttpStatus;
